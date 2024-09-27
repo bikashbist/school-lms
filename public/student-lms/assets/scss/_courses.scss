@@ -1,0 +1,48 @@
+.itinery {
+    &__item {
+        width: 100%;
+
+        span {
+            color: $base-color;
+            font-weight: 500;
+        }
+
+    }
+
+    h5 {
+        font-size: 18px;
+    }
+
+    .itinery a.accordion-button {
+        padding: 0px;
+        padding: 20px 0px;
+    }
+
+    a.accordion-button.collapsed {
+        background: #572f97 !important;
+        color: #fff !important;
+        margin: 2px 0px;
+        border: 0px !important;
+        text-decoration: none !important;
+        border-radius: 5px;
+    }
+
+    .accordion-button::after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23ffffff' d='M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z'/%3E%3C/svg%3E")!important;
+    }
+    .accordion-button:not(.collapsed) {
+        color: #fff;
+        background-color: #9C27B0 !important;
+        text-decoration: none;
+        border-radius: 5px;
+ 
+    }
+
+}
+.courses-sidebar{
+    .profile{
+        img{
+            background-color: #572f97;
+        }
+    }
+}

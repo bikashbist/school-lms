@@ -1,0 +1,675 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+$base-color: #FFD500;
+$logo-color: #f18500;
+$dark-color: #000000;
+$white-color: #ffffff;
+@import 'group-member';
+@import 'courses';
+body {
+    font-family: "Inter", sans-serif;
+}
+
+ul {
+    padding-left: 0px;
+    margin-bottom: 0rem;
+
+    li {
+        list-style-type: none;
+
+        a {
+            text-decoration: none;
+            font-size: 16px;
+            color: $dark-color;
+
+        }
+    }
+}
+
+span.avatar {
+    background: $logo-color;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}
+
+.header {
+    &__navbar {
+        background: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, .08), 0 4px 12px rgba(0, 0, 0, .08);
+
+        &--left {
+            a {
+                padding: 15px;
+                display: block;
+                font-weight: 600;
+
+                i {
+                    font-size: 22px;
+                }
+            }
+        }
+
+        &--right {
+            a {
+                padding: 10px 20px;
+                display: block;
+                font-weight: 600;
+            }
+        }
+
+        /* Style for the dropdown */
+        .dropdown {
+            position: relative;
+        }
+
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: #fff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+            z-index: 1;
+            min-width: 200px;
+        }
+
+        .dropdown-menu li {
+            list-style: none;
+            padding: 10px 20px;
+        }
+
+        .dropdown-menu li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        /* Arrow flipping */
+        .dropdown:hover .arrow {
+            transform: rotate(180deg);
+            transition: transform 0.3s;
+        }
+
+        /* Add transition for smooth arrow flip */
+        .arrow {
+            transition: transform 0.3s;
+        }
+
+    }
+
+    .dropdown-menu {
+        a {
+            padding: 0px 0px 0px 0px;
+        }
+    }
+
+}
+
+.banner-profile {
+
+    &--details {
+        background-color: #f2f2f2;
+        border: 1px solid #c1c1c1;
+
+        &--img {
+            img {
+                height: 100px;
+                width: 100px;
+                -o-object-fit: cover;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+.my-learning {
+    background-color: #02042b;
+
+    a.active {
+        border-bottom: 5px solid $logo-color;
+
+    }
+
+    nav {
+        ul {
+            li {
+                list-style-type: none;
+
+                a {
+                    color: $white-color;
+                    text-decoration: none;
+                    margin: 20px 20px 0px 0px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    display: block;
+                    height: 2.7rem;
+                }
+            }
+        }
+    }
+}
+
+.my-learning-tag {
+    .nav-link {
+        color: #02042b;
+        margin-right: 20px;
+        background: #edf2fa;
+
+        &.active {
+            background-color: $logo-color;
+        }
+
+    }
+
+}
+
+.groups {
+    .profile {
+        height: 80px;
+        margin-top: -60px;
+        width: 80px;
+        background-color: $white-color;
+        border-radius: 5px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background-color: #fdfdfd;
+            border-radius: 20px;
+            padding: 5px;
+        }
+    }
+
+    .image-stack {
+        position: relative;
+        width: 80px;
+        height: 40px;
+    }
+
+    .image-stack img {
+        position: absolute;
+        width: 40px;
+        border: 2px solid $white-color;
+        border-radius: 50%;
+        top: 0;
+    }
+
+    .img1 {
+        left: 0;
+        z-index: 3;
+    }
+
+    .img2 {
+        left: 15px;
+        z-index: 2;
+    }
+
+    .img3 {
+        left: 30px;
+        z-index: 1;
+    }
+    .tulip {
+        position: absolute;
+        width: 15px; /* Adjust size as needed */
+        height: 15px; /* Adjust size as needed */
+        left: 25px;  /* Position it over the desired image */
+        top: 12px;   /* Adjust to fine-tune positioning */
+        z-index: 4;  /* Ensure the tulip appears above all images */
+      }
+}
+
+.courses {
+    &__details {
+        overflow: hidden;
+        .banner {
+            height: 150px;
+            object-fit: cover;
+        }
+
+        &--content {
+            a {
+                font-size: 20px;
+                font-weight: 600;
+                color: #02042b;
+                text-decoration: none;
+            }
+
+        }
+
+
+    }
+
+    /* Chrome, Safari, Opera */
+    progress::-webkit-progress-bar {
+        background-color: #e0e0e0;
+        /* Background of the bar */
+    }
+
+    progress::-webkit-progress-value {
+        background-color: #4caf50;
+        /* Color of the progress */
+    }
+
+    /* Firefox */
+    progress::-moz-progress-bar {
+        background-color: #4caf50;
+        /* Color of the progress */
+    }
+
+    progress {
+        width: 100%;
+        height: 5px;
+        border-radius: 50px;
+        background-color: #e0e0e0;
+        /* Background of the bar */
+    }
+}
+
+.footer {
+    background-color: #2d2f31;
+
+    h6 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: $white-color;
+    }
+
+    a {
+        display: block;
+        line-height: 36px;
+        text-decoration: none;
+        color: $white-color;
+    }
+
+    p {
+        line-height: 30px;
+        color: $white-color;
+    }
+
+    &__nav {
+        a {
+            padding: 0px 20px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+    }
+
+    .line {
+        height: 2px;
+        background-color: #EFEFEF;
+    }
+}
+
+.inner--banner {
+    position: relative;
+
+    img {
+        width: 100%;
+
+    }
+
+    &__details {
+        position: absolute;
+        left: 0;
+        top: 30px;
+        right: 0;
+        bottom: 30px;
+
+        h1 {
+            font-size: 44px;
+            font-weight: 700;
+            padding: 15px 0px;
+        }
+    }
+}
+
+.learning-details {
+    ul li {
+        list-style: none;
+        position: relative;
+        padding-left: 20px;
+        padding-bottom: 10px;
+    }
+
+    ul li::before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 14px;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 10px;
+        background-color: $logo-color;
+        border-radius: 50%;
+    }
+}
+
+.login-register {
+    input {
+        width: 100%;
+        padding: 10px 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    label {
+        display: inline-block;
+        margin-bottom: 15px;
+        margin: 15px 0px;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    .btn-submit {
+        background-color: $logo-color;
+        color: $white-color;
+        border: 1px solid $logo-color;
+        font-weight: 600;
+    }
+
+    .form-container {
+        background-color: #EFEFEF;
+        padding: 50px;
+        border-radius: 5px;
+
+    }
+}
+
+.summer-camp {
+    height: 400px;
+
+    img {
+        width: 100%;
+        -o-object-fit: fill;
+        object-fit: fill;
+        height: 100%;
+    }
+
+    ;
+}
+
+.courses_available {
+    &__details {
+        border-radius: 5px;
+        overflow: hidden;
+
+        img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .bg-one {
+            background-color: $logo-color;
+        }
+
+        h5 {
+            margin-bottom: 0;
+        }
+
+    }
+
+    &__content {
+        background: #efefef;
+        padding: 0px 0px 15px 0px;
+
+        p {
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+            background-color: #efefef;
+            display: block;
+            padding: 8px 20px;
+
+            a {
+                color: rgb(33 37 41);
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.camp-title {
+    background-color: $logo-color;
+    color: $white-color;
+}
+
+.cic-approch {
+    img {
+        width: 100%;
+    }
+}
+
+.offer {
+    h1 {
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
+    h4 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 500;
+    }
+}
+
+.end-to-end {
+    h2 {
+        font-weight: bold;
+        font-size: 36px;
+    }
+
+    span {
+        font-size: 30px;
+        color: $logo-color;
+        font-weight: 500;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 500;
+    }
+}
+
+.end-to-end-content {
+    h5 {
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        padding-bottom: 0px;
+        margin-bottom: 8px;
+    }
+}
+
+.title-robo {
+    img {
+        width: 100%;
+
+        object-fit: contain;
+    }
+}
+
+.camp-title-bg {
+    background-color: #0dcaf0;
+    color: $white-color;
+}
+
+.title-robo img {
+    width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    background: $logo-color;
+}
+
+.grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.setup {
+
+    /* Position the navigation arrows */
+    .owl-nav .owl-prev,
+    .owl-nav .owl-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #f8f9fa;
+        /* Background color for the arrows */
+        border-radius: 50%;
+        /* Circular button */
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 1000;
+        /* Ensure arrows are above other elements */
+    }
+
+    /* Position the left arrow to the far left */
+    .owl-nav .owl-prev {
+        left: -60px;
+        /* Adjust this value to your preference */
+    }
+
+    /* Position the right arrow to the far right */
+    .owl-nav .owl-next {
+        right: -60px;
+        /* Adjust this value to your preference */
+    }
+
+    /* Style the arrow icons */
+    .owl-nav .owl-prev i,
+    .owl-nav .owl-next i {
+        font-size: 20px;
+        /* Font size of the arrows */
+        color: #000;
+        /* Color of the arrow icons */
+    }
+
+}
+
+.coding-chalange {
+    h4 {
+        font-size: 36px;
+    }
+}
+
+.coding-img {
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.coding-text {
+    p {
+        text-align: justify;
+        line-height: 26px;
+    }
+}
+
+.coding-involve {
+    background-color: $logo-color;
+    color: white;
+}
+
+.coding-process {
+    .icon {
+        width: 60px;
+        height: 60px;
+        background: $logo-color;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $white-color;
+        font-size: 25px;
+    }
+}
+
+.login-register-btn {
+    padding: 4px 0px;
+
+    a {
+        text-decoration: none;
+        color: #000;
+        margin-left: 20px;
+        font-size: 14px;
+    }
+}
+
+.login-modals {
+    .form-control {
+        background-color: $white-color;
+        color: #777;
+        border-width: 1px;
+        border-color: #cccccc;
+        height: 50px;
+    }
+
+    .submit-btn {
+        height: 50px;
+        background-color: $logo-color;
+        color: $white-color;
+        font-weight: 600;
+    }
+
+    .submit-sign-up {
+        background-color: #3f3f3f;
+        color: $white-color;
+        font-weight: 600;
+        text-decoration: none;
+        line-height: 36px;
+    }
+
+    .forget-password {
+        text-decoration: none;
+        color: $logo-color;
+    }
+
+    .close-btn-right {
+
+        background-color: #e8e8e8;
+        padding: 8px;
+
+    }
+
+    .position-relative-content {
+        position: relative;
+    }
+
+}
